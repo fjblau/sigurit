@@ -1,2 +1,1 @@
-# sigurit
-The official Sigurit Repository
+# org.sigurit
