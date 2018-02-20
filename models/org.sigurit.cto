@@ -6,14 +6,14 @@ namespace org.sigurit
 
 participant User identified by email {
   o String email
+  --> Allergy allergies
 }
 
-asset SampleAsset identified by assetId {
-  o String assetId
-  o String value
+asset Allergy identified by allergyId {
+  o String allergyId
 }
 
-transaction ChangeAssetValue {
-  o String newValue
-  --> Asset relatedAsset
+transaction AddAllergyToUser {
+  --> User user
+  --> Allergy allergy
 }
