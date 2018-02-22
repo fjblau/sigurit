@@ -21,12 +21,25 @@ o P
 o R
 }
 
+enum yesno {
+  o Y 
+  o N
+}
+event checkedCode {
+  o yesno checkedReturn
+}
+
 participant AllergyUser identified by email {
   o String email
   o allergies_short[] Allergies optional
 }
 
 transaction AddAllergyToUser {
+  --> AllergyUser allergyUser
+  o String  allergy
+}
+
+transaction CheckAllergyForUser {
   --> AllergyUser allergyUser
   o String  allergy
 }
