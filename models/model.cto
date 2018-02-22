@@ -2,6 +2,7 @@
  * Write your model definitions here
  */
 
+namespace ''
 
 participant AllergyUser identified by email {
   o String email
