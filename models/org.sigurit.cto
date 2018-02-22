@@ -2,7 +2,6 @@
  * Write your model definitions here
  */
 
-namespace org.sigurit
 
 participant AllergyUser identified by email {
   o String email

@@ -13,7 +13,7 @@ const path = require('path');
 
 require('chai').should();
 
-const namespace = 'org.sigurit';
+const namespace = '';
 const assetType = 'SampleAsset';
 
 describe('#' + namespace, () => {
