@@ -4,16 +4,29 @@
 
 namespace org.sigurit
 
-participant AllergyUser identified by email {
-  o String email
-  --> Allergy[] allergies
+enum allergies_short {
+o A
+o B
+o C
+o D
+o E
+o F 
+o G
+o H
+o L 
+o M 
+o N 
+o O
+o P 
+o R
 }
 
-asset Allergy identified by allergyId {
-  o String allergyId
+participant AllergyUser identified by email {
+  o String email
+  o allergies_short[] Allergies optional
 }
 
 transaction AddAllergyToUser {
   --> AllergyUser allergyUser
-  --> Allergy allergy
+  o String  allergy
 }
