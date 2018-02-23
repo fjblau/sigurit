@@ -29,6 +29,10 @@ event checkedCode {
   o yesno checkedReturn
 }
 
+event errorMsg {
+  o String errMsg
+}
+
 participant AllergyUser identified by email {
   o String email
   o allergies_short[] Allergies optional
