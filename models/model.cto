@@ -38,6 +38,21 @@ participant AllergyUser identified by email {
   o allergies_short[] Allergies optional
 }
 
+participant Restaurant identified by restaurantId{
+  o String restaurantId
+}
+
+asset Menu identified by menuId {
+  o String menuId
+}
+
+asset MenuItem identified by menuItemId {
+  o String menuItemId
+  o Integer menuItemOrder
+  o String menuItem
+  o allergies_short[] Allergies optional
+}
+
 transaction AddAllergyToUser {
   --> AllergyUser allergyUser
   o String  allergy
