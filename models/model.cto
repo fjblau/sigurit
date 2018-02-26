@@ -68,3 +68,4 @@ transaction CheckAllergyForUser {
   --> AllergyUser allergyUser
   o String  allergy
 }
+
