@@ -44,6 +44,7 @@ participant Restaurant identified by restaurantId{
 
 asset Menu identified by menuId {
   o String menuId
+  --> MenuItem[] menuItems optional
 }
 
 asset MenuItem identified by menuItemId {
@@ -56,6 +57,11 @@ asset MenuItem identified by menuItemId {
 transaction AddAllergyToUser {
   --> AllergyUser allergyUser
   o String  allergy
+}
+
+transaction AddMenuItemToMenu {
+  --> Menu menu
+  --> MenuItem  menuItem
 }
 
 transaction CheckAllergyForUser {
